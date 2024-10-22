@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <script>
+    function simpleCalc(z) {
+
+      //get input from the user and store in variables
+      var x = document.getElementById("txtX").value;
+
+      var y = document.getElementById("txtY").value;
+
+      var answer;
+
+      // PArese the string into floating number
+      x = parseFloat(x);
+      y = parseFloat(y);
+
+      // if z == 1, then it will add the two numbers
+      // if z == 2, then it will subtract the two numbers
+      // if z == 3, then it will multiply the two numbers
+      // if z == 4, then it will divide the two numbers
+
+      switch (z) {
+        case 1:
+          answer = x + y;
+          break;
+        case 2:
+          answer = x - y;
+          break;
+        case 3:
+          answer = x * y;
+          break;
+        case 4:
+          if (y == 0) { // catch divison by 0
+            answer = "undefined";
+          } else {
+            answer = x / y;
+          }
+          break;
+      }
+
+      // display answer
+      alert("The answer is " + answer);
+
+    }
+  </script>
+</head>
+
+
+<body>
+  <h1>Simple Calculator</h1>
+  <p>Enter two integer numbers into the calculator</p>
+
+  <div>
+    <label>X:</label>
+    <input type="number" id="txtX" value="2">
+  </div>
+
+  <div>
+    <label>Y:</label>
+    <input type="number" id="txtY" value="2">
+  </div>
+
+  <div id="basicOperation">
+    <input type="submit" value="Add" onClick="simpleCalc(1)">
+    <input type="submit" value="Subtract" onClick="simpleCalc(2)">
+    <input type="submit" value="Multiply" onClick="simpleCalc(3)">
+    <input type="submit" value="Divide" onClick="simpleCalc(4)">
+  </div>
+</body>
+
+</html>
