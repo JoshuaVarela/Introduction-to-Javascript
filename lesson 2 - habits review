@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<!--- Create 7 buttons that return the 7 Habits of Highly Effective people respectively --->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script>
+    // arrays cuz I am lazy
+    const sevenHabits = ["Be proactive",
+                          "begin with the end in mind, set goals",
+                          "Put first things first",
+                          "Think win-win, negotiate so both parties win",
+                          "Seek first to understand, then to be understood",
+                          "Synergize, collaboration, and teamwork",
+                          "Sharpen the saw, learn and continually improve"];
+    function habitPopUp(x) {
+      alert(sevenHabits[x]);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Do you know your 7 Habits of Highly Effective People?</h1>
+  <button type="button" onclick="habitPopUp(0)">What is Habit 1?</button>
+  <br />
+  <button type="button" onclick="habitPopUp(1)">What is Habit 2?</button>
+  <br />
+  <button type="button" onclick="habitPopUp(2)">What is Habit 3?</button>
+  <br />
+  <button type="button" onclick="habitPopUp(3)">What is Habit 4?</button>
+  <br />
+  <button type="button" onclick="habitPopUp(4)">What is Habit 5?</button>
+  <br />
+  <button type="button" onclick="habitPopUp(5)">What is Habit 6?</button>
+  <br />
+  <button type="button" onclick="habitPopUp(6)">What is Habit 7?</button>
+</body>
+
+</html>
