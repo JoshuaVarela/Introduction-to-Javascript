@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script>
+    function playVideo() {
+      document.getElementById("bearVideo").play();
+    }
+    function pauseVideo() {
+      document.getElementById("bearVideo").pause();
+    }
+    function stopVideo() {
+      document.getElementById("bearVideo").load();
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Bear in the wild!</h1>
+  <p>This video is about a bear (1min)</p>
+
+  <video id="bearVideo">
+    <source src="https://w3schools.com/html/movie.mp4" type="video/mp4" />
+  </video>
+
+  <br />
+
+  <button onClick="playVideo()" type="button">&#9654;</button>
+
+  <button onClick="pauseVideo()" type="button">&#9208;</button>
+
+  <button onClick="stopVideo()" type="button">&#9632;</button>
+</body>
+
+</html>
