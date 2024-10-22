@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script>
+    function quiz() {
+      var answer = prompt("What is habit 7 of Highly Effective People?");
+      answer = answer.toLowerCase();
+
+      if (answer == "sharpen the saw") {
+        alert("Correct. Sharpen the saw means to take time to learn and improve mentally, emotionally, and physically. ");
+      } else {
+        alert("Not correct. The correct answer is sharpen the saw.");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <p>Do you know what is the #7 habit of highly effective people?</p>
+  <input type="submit" value="Start" onclick="quiz()" />
+</body>
+
+</html>
