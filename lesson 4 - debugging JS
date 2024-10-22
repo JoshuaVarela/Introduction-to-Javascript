@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <script>
+    function calcGrossDomesticProducts() {
+
+      //get input from the user and store in variables
+      var privateConsumption = document.getElementById("privateCon").value;
+
+      var grossInvestment = document.getElementById("grossInv").value;
+
+      var governmentSpending = document.getElementById("govSpending").value;
+
+      var exports = document.getElementById("export").value;
+      var imports = document.getElementById("import").value;
+
+
+      //convert string values to float numbers
+      privateConsumption = parseInt(privateConsumption);
+
+      grossInvestment = parseFloat(grossInvestment);
+
+      governmentSpending = parseFloat(governmentSpending);
+
+      exports = parseFloat(exports);
+
+      imports = parseFloat(imports);
+
+
+      //Calculate GDP from the inputs
+      var netExports = exports * imports;
+      alert("Test 1");
+      var grossDomesticProduct = privateConsumption + grossInvestment
+        + governmentSpending + netExports;
+      alert("Test 2");
+      //Output the answer as text
+      document.getElementById("txtAnswer").innerHTML =
+        "GDP is calculated to equal $ " + grossDomesticProduct + " million.";
+
+      alert("FINISHED!");
+    }
+  </script>
+</head>
+
+<!-- 
+      Cleaned up the html code here to be more organized and easier to read
+  --->
+
+<body>
+  <h1>Calculate Gross Domestic Product</h1>
+  <p>Enter values in millions, e.g., one unit equally one million. </p>
+
+  <div>
+    Private Consumption
+    <input type="number" id="privateCon" value="200">
+  </div>
+
+  <div>
+    Gross Investment
+    <input type="number" id="grossInv" value="100">
+  </div>
+
+  <div>
+    Government Spending
+    <input type="number" id="govSpending" value="300">
+  </div>
+
+  <div>
+    Exports
+    <input type="number" id="export" value="75">
+  </div>
+
+  <div>
+    Imports
+    <input type="number" id="import" value="50">
+  </div>
+
+  <input type="submit" value="Calculate" onClick="calcGrossDomesticProducts()">
+  <div id="txtAnswer"></div>
+</body>
+
+</html>
